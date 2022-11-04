@@ -111,25 +111,21 @@ let sizes =
                 ]
         ]
 
-    let code = """let colors = [
-    select.primary  , "primary"
-    select.secondary, "secondary"
-    select.accent   , "accent"
-    select.ghost    , "ghost"
-    select.error    , "error"
-    select.info     , "info"
-    select.success  , "success"
-    select.warning  , "warning"
+    let code = """let sizes = [
+    select.xs, "xs"
+    select.sm, "sm"
+    select.md, "md"
+    select.lg, "lg"
 ]
 
 Html.div [
-    for color, colorText in colors do
+    for size, sizeText in sizes do
         Daisy.select [
-            color
+            size
             select.bordered
             prop.className "w-full max-w-xs"
             prop.children [
-                Html.option colorText
+                Html.option sizeText
                 Html.option "telekenesis"
                 Html.option "time travel"
                 Html.option "invisibility"
